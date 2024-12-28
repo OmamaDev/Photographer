@@ -3,7 +3,7 @@
  * The base configuration for WordPress
  *
  * The wp-config.php creation script uses this file during the installation.
- * You don't have to use the web site, you can copy this file to "wp-config.php"
+ * You don't have to use the website, you can copy this file to "wp-config.php"
  * and fill in the values.
  *
  * This file contains the following configurations:
@@ -13,14 +13,14 @@
  * * Database table prefix
  * * ABSPATH
  *
- * @link https://wordpress.org/documentation/article/editing-wp-config-php/
+ * @link https://developer.wordpress.org/advanced-administration/wordpress/wp-config/
  *
  * @package WordPress
  */
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'WordPress' );
+define( 'DB_NAME', 'josefharris' );
 
 /** Database username */
 define( 'DB_USER', 'root' );
@@ -48,14 +48,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         '>5^pbUS,B2giLt/N~ZozhX!,5diOR;+!De5e8p0)SzVvtYxYeP-x&c#/u4G5AQm9' );
-define( 'SECURE_AUTH_KEY',  'Ep/>;$Hdx4Lf#yH9z`PpZS[:s^eY=ZM=)F]E1 wk6g0/#_m-]:uFbC{^3B[,Qa:|' );
-define( 'LOGGED_IN_KEY',    '!}Ysr%VD=*Dk!_TtjP4EHb8gD[+I>~&Kvp>P5(MNY*[gn#4[#8.@0D~saXtmvcj*' );
-define( 'NONCE_KEY',        'E4K*cLbDqs3O9 DZ4g..YJ2Qy1M[CSo*WqcT[7a^6KG6a4-2|7)oScFZAn>K!]WW' );
-define( 'AUTH_SALT',        'db[KnmkC)JQ:Ts%e_>&%=( _=cO/VD=;JgxZK0CmiHE1q~}$s]q^^<G^DMj/1nkU' );
-define( 'SECURE_AUTH_SALT', 'UnT@o~MZgGEY#4tIop#=ItxnFx~,9k_yEVRf1nbC_s`zceY~PFzD66j(t-,V(`Y;' );
-define( 'LOGGED_IN_SALT',   'clQ<6vxb~<#+IZJv8KK |ic,2?lpCj.g~m}T:?60HuTpyXQs4sJfM;-OUAYO)5Hh' );
-define( 'NONCE_SALT',       '*?f.7+-e&VM%^FtdTGf3.q0-`xIjDN:Z@ ^/YZ`zrk6@GO{_OQ<kWJ{6mnhDVJiy' );
+define( 'AUTH_KEY',         ';>qmQ$::MoTT`Wo6FjkAcdVQ0Ib->}i)^%+P,C8e,K=rGY[|6.`i$~?]!Uj),1Se' );
+define( 'SECURE_AUTH_KEY',  '|0s-9lz!hNJriW`N(=th,+Mj_h$M{k+[1Z?gM]N`S2@A8tcT_2fO;n9>HI$OF+t]' );
+define( 'LOGGED_IN_KEY',    '}6!ZGO$Iwum3P@UPJY<5X=IM@Xc|07z`kZuS{xZx}bV*>P$>Bj_D1+LQU[L|drXN' );
+define( 'NONCE_KEY',        'q1JMCs.D3,Vb<@}!1=0YxsivS`NeY{oEU$OSIn6cnRngr!>*yCh SB{8B%JT_JeG' );
+define( 'AUTH_SALT',        'KR .U?z,5o1z,?n(0B- &5f]Q6. 9g6WxYG|y5l:c~6}MN4->!>)8i UYLqyGk1U' );
+define( 'SECURE_AUTH_SALT', ')_ObLy8VGe:=KAjWygCm-`NxP~eCX<04gdtu?S:o~ojBF=I~hE)BA-5|&g~An|=I' );
+define( 'LOGGED_IN_SALT',   '1^-xi{JP,?I sd)h:Ii$T={KRd,R%XnjUi~S[kQ9@&Y<p8eo*d)5hbZoOU5; CUU' );
+define( 'NONCE_SALT',       'yTvnE*3`-jV-SJ~jVBbeBnn>x<%$%@BrvtWzhpzP<ruX1t[-qgAQK^$=D}27(D/d' );
 
 /**#@-*/
 
@@ -64,6 +64,12 @@ define( 'NONCE_SALT',       '*?f.7+-e&VM%^FtdTGf3.q0-`xIjDN:Z@ ^/YZ`zrk6@GO{_OQ<
  *
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
+ *
+ * At the installation time, database tables are created with the specified prefix.
+ * Changing this value after WordPress is installed will make your site think
+ * it has not been installed.
+ *
+ * @link https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#table-prefix
  */
 $table_prefix = 'wp_';
 
@@ -77,10 +83,9 @@ $table_prefix = 'wp_';
  * For information on other constants that can be used for debugging,
  * visit the documentation.
  *
- * @link https://wordpress.org/documentation/article/debugging-in-wordpress/
+ * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
  */
 define( 'WP_DEBUG', false );
-define('WP_MEMORY_LIMIT', '2048M');
 
 /* Add any custom values between this line and the "stop editing" line. */
 
@@ -95,4 +100,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
-
